@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+
+body {
+  padding-top: 60px;
+}
+
+.url {
+  height: 300px;
+  background-color: red;
+}

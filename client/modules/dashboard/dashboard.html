@@ -1,0 +1,35 @@
+<template name="dashboard">
+  <div class="container">
+    {{> website_add_form}}
+    <h3>Here you have your websites.</h3>
+    {{#if currentUser}}
+      <button class="btn btn-success js-add-website">Add new Website</button>
+    {{/if}}
+    <div class="row">
+      <br>
+      {{#each websites}}
+        <div class="col-xs-12 col-md-3">
+          <div class="url">
+            <a href="{{url}}">{{url}}</a>
+          </div>
+          <div class="caption">
+            <p>Description: {{description}}</p>
+          </div>
+          <div class="caption">
+            <p>Votes: {{votes}}</p>
+          </div>
+          <div class="votes">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="glyphicon glyphicon-minus js-vote-website" id="{{_id}}"></span>
+              </div>
+              <div class="col-md-6">
+                <span class="glyphicon glyphicon-plus js-vote-website" id="{{_id}}"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>

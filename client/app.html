@@ -1,0 +1,19 @@
+<head>
+  <title>Social Web</title>
+</head>
+
+<body>
+</body>
+<template name="ApplicationLayout">
+  {{> navbar}}
+  {{> yield "main"}}
+</template>
+
+
+<template name='navbar'>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      {{> loginButtons}}
+    </div>
+  </nav>
+</template>
