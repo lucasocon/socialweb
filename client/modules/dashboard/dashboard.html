@@ -10,9 +10,11 @@
       {{#each websites}}
         <div class="col-xs-12 col-md-3">
           <div class="url">
-            <a href="{{url}}">{{url}}</a>
           </div>
           <div class="caption">
+            <p>Url:
+              <a href="/websites/{{_id}}">{{url}}</a>
+            </p>
             <p>Description: {{description}}</p>
           </div>
           <div class="caption">
@@ -21,12 +23,15 @@
           <div class="votes">
             <div class="row">
               <div class="col-md-6">
-                <span class="glyphicon glyphicon-minus js-vote-website" id="{{_id}}"></span>
+                <button class="btn btn-warning js-vote-website glyphicon glyphicon-minus" id="{{_id}}"></button>
               </div>
               <div class="col-md-6">
-                <span class="glyphicon glyphicon-plus js-vote-website" id="{{_id}}"></span>
+                <button class="btn btn-warning js-vote-website glyphicon glyphicon-plus" id="{{_id}}"></button>
               </div>
             </div>
+          </div>
+          <div class="button-back">
+            <a href="/websites/{{_id}}" class="btn btn-success">Details</a>
           </div>
         </div>
       {{/each}}

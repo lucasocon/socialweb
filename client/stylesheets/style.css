@@ -5,6 +5,14 @@ body {
 }
 
 .url {
-  height: 300px;
-  background-color: red;
+  height: 200px;
+  background-color: #9C27B0;
+}
+
+.votes {
+  padding-bottom: 20px;
+}
+
+.button-back {
+  padding-bottom: 20px;
 }
