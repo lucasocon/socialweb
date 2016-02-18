@@ -1,11 +1,13 @@
 <template name="website">
   <div class="container">
+    <a href="/dashboard" class="btn btn-default">Back</a>
     <div class="url"></div>
     <h3>{{url}}</h3>
     <p>{{description}}</p>
-    <a href="/dashboard" class="btn btn-default">Back</a>
-    <h3>Edit webiste</h3>
-    {{> edit_website}}
+    <div class="panel">
+      <h2>Comments</h2>
+      {{> comments}}
+    </div>
   </div>
 </template>
 
@@ -20,5 +22,28 @@
       <textarea name="description" class="form-control" placeholder="{{description}}"></textarea>
     </div>
     <button class="btn btn-success">edit</button>
+  </form>
+</template>
+
+<template name="comments">
+  {{#each comments}}
+    <hr>
+    <p><strong>By: </strong>{{userUsername}}</p>
+    <p><strong>Content: </strong>{{content}}</p>
+    <p><strong>At: </strong>{{createdAt}}</p>
+    <hr>
+  {{/each}}
+  <div class="row">
+    {{> add_comment}}
+  </div>
+</template>
+
+<template name="add_comment">
+  <form class="js-add-comment">
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea name="content" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-success">add comment</button>
   </form>
 </template>
