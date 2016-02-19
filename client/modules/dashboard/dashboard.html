@@ -3,6 +3,8 @@
     {{> website_add_form}}
     <h3>Here you have your websites.</h3>
     {{#if currentUser}}
+      {{> search_bar}}
+      <br>
       <button class="btn btn-success js-add-website">Add new Website</button>
     {{/if}}
     <div class="row">
